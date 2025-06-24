@@ -1,6 +1,6 @@
 import json
 import os
-#SOCORRO DEUSS
+
 #region -=- SAVE/LOAD -=-
 
 def salvar(nomeArquivo,lista):
