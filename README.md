@@ -35,7 +35,7 @@ Prefiro aprender "fazendo". Erros fazem parte do processo — e neste repositór
 ## 📅 Início da jornada
 
 - 📍 Início nos estudos: **Janeiro de 2025**
-- Este repositório começou: **[insira a data de criação do repo]**
+- Este repositório começou: **Junho de 2025**
 
 ## 💡 Contribuições
 
