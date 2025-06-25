@@ -1,4 +1,3 @@
-
 login = str(input("Usuario --->"))
 
 senha = str(input("Senha --->"))

@@ -10,10 +10,10 @@ media = soma/4
 
 if (soma >= 60):
     
-    print("\nSua nota total foi %.1f , com uma média de %.1f" %(soma,media))
-    print("Parabéns você passou!!!\n")
+    print("\nSua nota total foi %.2f , com uma média de %.2f" %(soma,media))
+    print("Parabéns você passou!!!")
 
 if (soma < 60):
 
-    print("\nSua nota total foi %.1f , com uma média de %.1f" %(soma,media))
-    print("Infelizmente você não passou!!!\n")
+    print("\nSua nota total foi %.2f , com uma média de %.2f" %(soma,media))
+    print("Infelizmente você não passou!!!")

@@ -23,31 +23,24 @@ if n1 > n2 or n1 > n3:
     pos1 = n1
     if n2 > n3:
         pos2 = n2
-        pos3 = n3
     else:
-        pos3 = n2
-        pos2 = n3
+        pos3 = n3
 
-elif n2 > n1 or n2 > n3:
+if n2 > n1 or n2 > n3:
     pos1 = n2
     if n1 > n3:
         pos2 = n1
-        pos3 = n3
     else:
-        pos2 = n3
-        pos3 = n1
+        pos3 = n3
 
-
-elif n3 > n2 or n3 > n1:
+if n3 > n2 or n3 > n1:
     pos1 = n3
     if n2 > n1:
         pos2 = n2
-        pos3 = n1
     else:
         pos3 = n1
-        pos2 = n2
 
-else:
+if n1 == n2 and n2 == n3:
     pos1 = n1
     pos2 = n2
     pos3 = n3

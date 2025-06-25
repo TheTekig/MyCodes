@@ -1,8 +1,6 @@
 horario = int(input("Horario ---> "))
 
-if  horario < 0:
-    print("Horario Invalido")
-elif horario < 5:
+if horario < 5:
     print("Vai Dormir!")
 elif horario < 12:
     print("Bom Dia!")
