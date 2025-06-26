@@ -1,0 +1,12 @@
+{
+    "123": {
+        "nome": "Caneta",
+        "preco": 2.5,
+        "estoque": 100
+    },
+    "321": {
+        "nome": "Borracha",
+        "preco": 2.5,
+        "estoque": 318
+    }
+}
