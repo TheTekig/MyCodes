@@ -1,17 +1,1 @@
-{
-    "123": {
-        "nome": "Caneta",
-        "preco": 2.5,
-        "estoque": 95
-    },
-    "321": {
-        "nome": "Borracha",
-        "preco": 2.5,
-        "estoque": 318
-    },
-    "654": {
-        "nome": "Grafite",
-        "preco": 2.5,
-        "estoque": 200
-    }
-}
+{"111": {"Nome": "Elden Ring", "Preco": 2.5, "Quantidade": "50"}}

@@ -4,44 +4,55 @@
 def CadastroCandidato(vNumCandidatos,vVotos):
 
     print("\n\tCadastro de Candidatos\n")
-    NumCandidatos = LerNumCandidatos()
+    Candidato = LerNumCandidatos
+    local = PesquisarNumCandidato(vNumCandidatos,vVotos,Candidato)
+    print(local)
+    
+    if local != -1:
+
+        while Candidato == vNumCandidatos[local] :  
+            print("Candidato Já Cadastrado!")
+
+            Candidato = LerNumCandidatos
+            local = PesquisarNumCandidato(vNumCandidatos,vVotos,Candidato)
+
     NumVotos = LerNumVotos()
 
-    vNumCandidatos.append(NumCandidatos)
+    vNumCandidatos.append(Candidato)
     vVotos.append(NumVotos)
 
-def PesquisarNumCandidato(vNumCandidatos,vVotos):
+def PesquisarNumCandidato(vNumCandidatos,vVotos,Candidato):
 
-    print("\nPesquisar Número dos Candidatos\n")
-    e = LerNumCandidatos()
-    local = None
-
-    while e not in vNumCandidatos:
-        print("Candidato não Encontrado")
-        e = LerNumCandidatos()
-
-    for i , e in enumerate(vNumCandidatos):
-        local = i
-
-    print(vNumCandidatos[local],"/ Possui:",vVotos[local],"% Dos Votos")
+    local = -1
+    i = 0
+    while  i < len(vNumCandidatos):
+        if Candidato == vNumCandidatos[i]:
+            local = i
+            print(vNumCandidatos[local],"/ Possui:",vVotos[local],"% Dos Votos")
+        i += 1
     return local
 
-def ExcluirCandidato(vNumCandidatos,vVotos,):
+def ExcluirCandidato(vNumCandidatos,vVotos,candidato):
     print("\n\tExcluir Candidatos\n")
 
-    local = PesquisarNumCandidato(vNumCandidatos,vVotos)
+    local = PesquisarNumCandidato(vNumCandidatos,vVotos,candidato)
 
-    vNumCandidatos.pop(local)
-    vVotos.pop(local)
+    if local == -1:
+        print("Candidato não Encontrado!")
+    else:
+        vNumCandidatos.pop(local)
+        vVotos.pop(local)
 
-def AtualizarCandidato(vNumCandidatos,vVotos):
+def AtualizarCandidato(vNumCandidatos,vVotos,candidato):
     print("\n\tAlterar Dados do Candidato\n")
-
-    local = PesquisarNumCandidato(vNumCandidatos,vVotos)
-
-    print("\nNovos Dados Candidato")
-    vNumCandidatos[local] = LerNumCandidatos()
-    vVotos[local] = LerNumVotos()
+    local = PesquisarNumCandidato(vNumCandidatos,vVotos,candidato)
+    if local == -1:
+        print("Candidato não Encontrado")
+        
+    else:    
+        print("\nNovos Dados Candidato")
+        vNumCandidatos[local] = LerNumCandidatos()
+        vVotos[local] = LerNumVotos()
 
 def ListarCandidatos(vNumCandidatos,vVotos):
     print("\n\tLista de Candidatos\n")
@@ -65,18 +76,13 @@ def CandidatoMaisVotado(vNumCandidatos,vVotos):
 
 #region Entrada de Dados
 
-def LerNomes():
-    Nome = input("Nome Candidato: ")
-    while Nome.replace(" ","").isalpha() == False or len(Nome) < 0 or len(Nome) > 100:
-        print("\nValor Inválido")
-        Nome = input("Nome Candidato: ")
-    return Nome
-
 def LerNumCandidatos():
     NumCandidato = input("Número do Candidato: ")
     while NumCandidato.isdigit() != True or len(NumCandidato) > 3:
+        
         print("\nValor Inválido") 
         NumCandidato = input("Número do Candidato: ")
+    
     return NumCandidato
 
 def LerNumVotos():
@@ -92,7 +98,7 @@ def LerNumVotos():
 
 def opcoesNumericas():
     opcao = input("Escolha a sua opção: ")
-    while opcao.isdigit() != True or opcao < 0 or opcao > 6:
+    while opcao.isdigit() != True or int(opcao) < 0 or int(opcao) > 6:
         print("Valor Digitado Inválido")
         opcao = input("Escolha a sua opção: ")
     return int(opcao)
@@ -125,12 +131,17 @@ def main():
             op = opcoesNumericas()
 
         if op == 2:
-            PesquisarNumCandidato(vNumCandidatos,vVotos)
+
+            candidato = LerNumCandidatos()
+            local = PesquisarNumCandidato(vNumCandidatos,vVotos,candidato)
+            print(vNumCandidatos[local],"/ Possui:",vVotos[local],"% Dos Votos")
+
             menu()
             op = opcoesNumericas()
     
         if op == 3:
-            AtualizarCandidato(vNumCandidatos,vVotos)
+            candidato = LerNumCandidatos()
+            AtualizarCandidato(vNumCandidatos,vVotos,candidato)
             menu()
             op = opcoesNumericas()  
 
@@ -140,7 +151,8 @@ def main():
             op = opcoesNumericas() 
 
         if op == 5:
-            ExcluirCandidato(vNumCandidatos,vVotos)
+            candidato = LerNumCandidatos()
+            ExcluirCandidato(vNumCandidatos,vVotos,candidato)
             menu()
             op = opcoesNumericas()
 
