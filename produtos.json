@@ -8,5 +8,10 @@
         "nome": "Borracha",
         "preco": 2.5,
         "estoque": 318
+    },
+    "654": {
+        "nome": "Grafite",
+        "preco": 2.5,
+        "estoque": 200
     }
 }
