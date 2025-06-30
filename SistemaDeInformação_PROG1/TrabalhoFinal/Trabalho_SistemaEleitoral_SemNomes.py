@@ -91,11 +91,11 @@ def LerNumVotos():
 #region Menu/Opções
 
 def opcoesNumericas():
-    opcao = int(input("Escolha a sua opção: "))
-    while opcao < 0 or opcao > 6:
+    opcao = input("Escolha a sua opção: ")
+    while opcao.isdigit() != True or opcao < 0 or opcao > 6:
         print("Valor Digitado Inválido")
-        opcao = int(input("Escolha a sua opção: "))
-    return opcao
+        opcao = input("Escolha a sua opção: ")
+    return int(opcao)
 
 def menu():
     print("\n\tSISTEMA ELEITORAL\n")

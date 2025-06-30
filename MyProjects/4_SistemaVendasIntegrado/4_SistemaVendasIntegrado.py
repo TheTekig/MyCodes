@@ -193,5 +193,6 @@ def main():
       menu()
       op == Opcoes()
 
-  print("Encerrando Programa...")  
+  print("Encerrando Programa...")
+    
 main()
