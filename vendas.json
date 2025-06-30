@@ -1,7 +1,13 @@
 {
     "1": {
+<<<<<<< HEAD
         "nome": "Caneta",
         "preco": 12.5,
         "vendido": 5
+=======
+        "nome": "Grafite",
+        "preco": 750.0,
+        "vendido": 300
+>>>>>>> 0af8216cf45bc479b79bb7944719d1342ecbb5be
     }
 }
