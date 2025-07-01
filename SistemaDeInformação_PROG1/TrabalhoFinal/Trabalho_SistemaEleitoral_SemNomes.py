@@ -4,7 +4,7 @@
 def CadastroCandidato(vNumCandidatos,vVotos):
 
     print("\n\tCadastro de Candidatos\n")
-    Candidato = LerNumCandidatos
+    Candidato = LerNumCandidatos()
     local = PesquisarNumCandidato(vNumCandidatos,vVotos,Candidato)
     print(local)
     
@@ -13,7 +13,7 @@ def CadastroCandidato(vNumCandidatos,vVotos):
         while Candidato == vNumCandidatos[local] :  
             print("Candidato Já Cadastrado!")
 
-            Candidato = LerNumCandidatos
+            Candidato = LerNumCandidatos()
             local = PesquisarNumCandidato(vNumCandidatos,vVotos,Candidato)
 
     NumVotos = LerNumVotos()
