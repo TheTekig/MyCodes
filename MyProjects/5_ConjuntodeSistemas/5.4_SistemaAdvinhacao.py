@@ -46,7 +46,15 @@ def game(vUsuario,vCPF,vNumero):
     numero = random.randint(1,vNumero[0])
     chute = int(lerChute(vNumero))
 
-    if chute == numero:
+    while chute != numero:
+      print("Você Errou")
+      if chute > numero:
+        print("O Número é Menor")
+        chute = int(lerChute(vNumero))
+      else:
+        print("O Número é Maior")
+        chute = int(lerChute(vNumero))
+    else:
       print("Você Acertou")
 
       vUsuario[CPF]["Saldo"] = vUsuario[CPF]["Saldo"] + 2.50
@@ -65,13 +73,6 @@ def game(vUsuario,vCPF,vNumero):
         print("Saindo...")
         return
 
-    else:
-
-      print("Você Errou")
-      if chute > numero:
-        print("O Número é Menor")
-      else:
-        print("O Número é Maior")
 
   else:
     print("Usuário não encontrado")

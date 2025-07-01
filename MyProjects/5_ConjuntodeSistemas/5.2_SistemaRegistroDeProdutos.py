@@ -125,7 +125,7 @@ def lerQuantidade():
   quantidade = input("Insira a Quantidade: ")
   while quantidade.replace(" ","").isdigit() != True or len(quantidade) < 0:
     quantidade = input("Valor Inválido\nInsira a Quantidade: ")
-  return quantidade
+  return int(quantidade)
 
 #endregion
 

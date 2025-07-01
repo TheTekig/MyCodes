@@ -3,10 +3,8 @@
 
 def CadastroCandidato(vNumCandidatos,vVotos):
 
-    print("\n\tCadastro de Candidatos\n")
-    
     Candidato = LerNumCandidatos()
-    local = PesquisarNumCandidato(vNumCandidatos,vVotos,Candidato)
+    local = PesquisarNumCandidato(vNumCandidatos,Candidato)
 
     
     if local != -1:
@@ -15,14 +13,14 @@ def CadastroCandidato(vNumCandidatos,vVotos):
             print("Candidato Já Cadastrado!")
 
             Candidato = LerNumCandidatos()
-            local = PesquisarNumCandidato(vNumCandidatos,vVotos,Candidato)
+            local = PesquisarNumCandidato(vNumCandidatos,Candidato)
 
     NumVotos = LerNumVotos()
 
     vNumCandidatos.append(Candidato)
     vVotos.append(NumVotos)
 
-def PesquisarNumCandidato(vNumCandidatos,vVotos,Candidato):
+def PesquisarNumCandidato(vNumCandidatos,Candidato):
   
     local = -1
     i = 0
@@ -34,7 +32,7 @@ def PesquisarNumCandidato(vNumCandidatos,vVotos,Candidato):
 
 def ExcluirCandidato(vNumCandidatos,vVotos,candidato):
 
-    local = PesquisarNumCandidato(vNumCandidatos,vVotos,candidato)
+    local = PesquisarNumCandidato(vNumCandidatos,candidato)
 
     if local == -1:
         print("Candidato não Encontrado!")
@@ -44,23 +42,17 @@ def ExcluirCandidato(vNumCandidatos,vVotos,candidato):
 
 def AtualizarCandidato(vNumCandidatos,vVotos,candidato):
 
-    local = PesquisarNumCandidato(vNumCandidatos,vVotos,candidato)
+    local = PesquisarNumCandidato(vNumCandidatos,candidato)
     if local == -1:
         print("Candidato não Encontrado")
     
     else:    
         print("\nNovos Dados Candidato")
-        
-        candidato = LerNumCandidatos()
-        while candidato in vNumCandidatos:
-            if candidato == vNumCandidatos[local]:
-                break
-            else:
-                print("Candidato já cadastrado")
-                candidato = LerNumCandidatos()
-                
-        vNumCandidatos[local] = candidato
-        vVotos[local] = LerNumVotos()
+
+        vNumCandidatos.pop(local)
+        vVotos.pop(local)
+
+        CadastroCandidato(vNumCandidatos,vVotos) 
 
 
 def ListarCandidatos(vNumCandidatos,vVotos):
@@ -135,6 +127,7 @@ def main():
     while op != 0:
 
         if op == 1:
+            print("\n\tCadastro de Candidatos\n")
             CadastroCandidato(vNumCandidatos,vVotos)
             menu()
             op = opcoesNumericas()
@@ -142,7 +135,7 @@ def main():
         if op == 2:
 
             candidato = LerNumCandidatos()
-            local = PesquisarNumCandidato(vNumCandidatos,vVotos,candidato)
+            local = PesquisarNumCandidato(vNumCandidatos,candidato)
             print(vNumCandidatos[local],"/ Possui:",vVotos[local],"% Dos Votos")
 
             menu()
