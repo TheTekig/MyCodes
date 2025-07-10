@@ -16,7 +16,7 @@ O objetivo principal deste repositório é:
 Atualmente, estou focado principalmente em:
 
 - 🐍 **Python**: lógica, estruturas de dados, manipulação de arquivos, mini projetos com listas, dicionários e JSON.
-- ⚙️ C: fundamentos da linguagem, entrada e saída de dados, funções, condicionais, operadores, estruturas de repetição e primeiros exercícios com organização modular de código.
+- ⚙️ **C**: fundamentos da linguagem, entrada e saída de dados, funções, condicionais, operadores, estruturas de repetição e primeiros exercícios com organização modular de código.
 
 Outras tecnologias ou linguagens podem aparecer à medida que avanços forem feitos.
 
