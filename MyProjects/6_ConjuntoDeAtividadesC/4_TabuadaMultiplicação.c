@@ -3,11 +3,17 @@
 
 int main(){
     
-int num,cont = 0,res;
+int num,cont,res,max;
+    
 printf("Vamos fazer a tabuada!\nDigite o numero que deseja saber a tabuada:");    
 scanf("%d", &num);
-printf("\n\tTabuada do %d\n\n", num);
-while (cont <= 10)
+    
+printf("\nDigite o numero maximo da tabuada:");
+scanf("%d", &max);
+    
+printf("\n\tTabuada do %d\n\n", num);   
+cont = 0;
+while (cont <= max)
     {
         res = num * cont;
         printf("%d x %d = %d\n", num, cont, res);
