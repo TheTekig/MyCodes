@@ -13,14 +13,21 @@ scanf("%d", &max);
     
 printf("\n\tTabuada do %d\n\n", num);   
 cont = 0;
-while (cont <= max)
-    {
-        res = num * cont;
-        printf("%d x %d = %d\n", num, cont, res);
-        cont = cont + 1;
-    }
-
+if (num < 0)
+{
+    printf("Numero invalido!\n");
+}
+else
+{
+    while (cont <= max)
+        {
+            res = num * cont;
+            printf("%d x %d = %d\n", num, cont, res);
+            cont = cont + 1;
+        }
     
-printf("\n\tFim da tabuada!\n");
+        
+    printf("\n\tFim da tabuada!\n");
+}
     return 0;
 }
