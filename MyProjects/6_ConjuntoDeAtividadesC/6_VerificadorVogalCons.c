@@ -35,13 +35,15 @@ int main(){
     Ccont = 0;
     LNome = strlen(nome);
     
-    for(i = 1;i <= strlen(nome);i++) 
+    for(i = 0;i <= strlen(nome);i++) 
     {
-        if (nome[i] == 'a' || nome[i] == 'e' || nome[i] == 'i' || nome[i] == 'o' || nome[i] == 'u') 
+        char letra = tolower(nome[i]);
+        
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') 
         {
             Vcont++;
         }
-        else
+        else if (isalpha(letra))
         {
             Ccont++;
         }
