@@ -13,7 +13,12 @@ int valinicial, valfinal;
     printf("Digite o valor final: ");
     scanf("%d", &valfinal);
 
-    if (valinicial < valfinal)
+    if (valinicial == valfinal)
+    {
+        printf("\nOs valores sao iguais!\n");
+    }
+    
+    else if (valinicial < valfinal)
     {
         printf("\nOrdem crescente:\n\n");
     while (valinicial <= valfinal)
@@ -22,7 +27,7 @@ int valinicial, valfinal;
             valinicial++;
         }
     }
-    else
+    else 
     {
         printf("Ordem decrescente:\n");
         while (valinicial >= valfinal)
