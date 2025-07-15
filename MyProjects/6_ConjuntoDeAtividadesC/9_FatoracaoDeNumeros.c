@@ -9,9 +9,9 @@ int fatoracao(int num)
     int i,g;
     printf("Fatoracao de %d: ",num);
     g = 1;
-    for(i = 1;i < num;i++)
+    for(i = 1;i <= num;i++)
     {     
-        g *= i + 1;
+        g *= i;
        printf("\n%d",g);
     }
 }
@@ -23,3 +23,5 @@ int num;
 printf("Enter a number: ");
 scanf("\n%d",&num);
 fatoracao(num);
+
+}
