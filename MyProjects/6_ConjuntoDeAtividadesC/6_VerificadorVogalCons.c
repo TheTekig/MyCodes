@@ -35,7 +35,7 @@ int main(){
     Ccont = 0;
     LNome = strlen(nome);
     
-    for(i = 0;i <= strlen(nome);i++) 
+    for(i = 0; i <= strlen(nome);i++) 
     {
         char letra = tolower(nome[i]);
         

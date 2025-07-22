@@ -11,6 +11,7 @@ int menu(){
     printf("\t5 - Media\n");
     printf("\t6 - Sair\n");
     printf("\nEscolha uma opcao:");
+
     scanf("%d", &opcao);
     while (opcao < 1 || opcao > 6)
     {
