@@ -20,15 +20,6 @@ Atualmente, estou focado principalmente em:
 
 Outras tecnologias ou linguagens podem aparecer à medida que avanços forem feitos.
 
-## 📁 Estrutura
-
-Os arquivos estão organizados por tipo de projeto ou funcionalidade. Exemplos de conteúdo:
-
-- `cadastro_clientes.py` – sistema simples de cadastro com validações e persistência em JSON.
-- `sistema_votacao.py` – projeto de simulação de eleições com candidatos, segundo turno e controle por CPF.
-- `treinos_basicos/` – exercícios de lógica, estrutura de repetição, listas e funções.
-- `experimentos/` – testes com novas bibliotecas, recursos da linguagem ou ideias aleatórias.
-
 ## 🧩 Filosofia
 
 Prefiro aprender "fazendo". Erros fazem parte do processo — e neste repositório estão muitos deles também. Aqui tem código feio, repetido, mal formatado... mas aos poucos tudo vai melhorando. 💪
